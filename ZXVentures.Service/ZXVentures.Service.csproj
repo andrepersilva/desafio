@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ZXVentures.Domain\ZXVentures.Domain.csproj" />
+    <ProjectReference Include="..\ZXVentures.Infra.Data\ZXVentures.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>

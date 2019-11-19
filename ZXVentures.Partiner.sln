@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 -Aplication", "1 -Aplication", "{25BC1822-2DEF-4D94-B88A-832E8E18E751}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 -Domain", "2 -Domain", "{9D1C613A-F4A7-40A1-B6D9-78229A11FF6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3- Service", "3- Service", "{7428F9C6-1E2E-4CCC-BAC8-C36DD4C2E630}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{2767CCE0-D425-48FD-A0DE-3DAE5E915954}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{6429209E-C464-4AE6-9F8A-A1177C19C967}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{16711534-495C-44A7-BB7C-7B60D8C44AF8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZXVentures.Domain", "ZXVentures.Domain\ZXVentures.Domain.csproj", "{81A0E896-FCD8-4F19-9554-2EED8C8F99EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZXVentures.Infra.Data", "ZXVentures.Infra.Data\ZXVentures.Infra.Data.csproj", "{D5A04E38-B0FB-4F94-871A-3D71B6B5D282}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZXVentures.Service", "ZXVentures.Service\ZXVentures.Service.csproj", "{E90F5607-D993-47D6-A37D-DA4C76D4ACF4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZXVentures.Aplication", "ZXVentures.Aplication\ZXVentures.Aplication.csproj", "{12A9197E-A2BF-49BF-BB5D-7AC5E9C68045}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{B3F601E6-887F-4A93-8693-7577244B5C23}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1D63CE08-D390-4178-8F2F-F32997F71432}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81A0E896-FCD8-4F19-9554-2EED8C8F99EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81A0E896-FCD8-4F19-9554-2EED8C8F99EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81A0E896-FCD8-4F19-9554-2EED8C8F99EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81A0E896-FCD8-4F19-9554-2EED8C8F99EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5A04E38-B0FB-4F94-871A-3D71B6B5D282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5A04E38-B0FB-4F94-871A-3D71B6B5D282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5A04E38-B0FB-4F94-871A-3D71B6B5D282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5A04E38-B0FB-4F94-871A-3D71B6B5D282}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E90F5607-D993-47D6-A37D-DA4C76D4ACF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E90F5607-D993-47D6-A37D-DA4C76D4ACF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E90F5607-D993-47D6-A37D-DA4C76D4ACF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E90F5607-D993-47D6-A37D-DA4C76D4ACF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12A9197E-A2BF-49BF-BB5D-7AC5E9C68045}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12A9197E-A2BF-49BF-BB5D-7AC5E9C68045}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12A9197E-A2BF-49BF-BB5D-7AC5E9C68045}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12A9197E-A2BF-49BF-BB5D-7AC5E9C68045}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3F601E6-887F-4A93-8693-7577244B5C23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3F601E6-887F-4A93-8693-7577244B5C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3F601E6-887F-4A93-8693-7577244B5C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3F601E6-887F-4A93-8693-7577244B5C23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6429209E-C464-4AE6-9F8A-A1177C19C967} = {2767CCE0-D425-48FD-A0DE-3DAE5E915954}
+		{16711534-495C-44A7-BB7C-7B60D8C44AF8} = {2767CCE0-D425-48FD-A0DE-3DAE5E915954}
+		{81A0E896-FCD8-4F19-9554-2EED8C8F99EE} = {9D1C613A-F4A7-40A1-B6D9-78229A11FF6A}
+		{D5A04E38-B0FB-4F94-871A-3D71B6B5D282} = {6429209E-C464-4AE6-9F8A-A1177C19C967}
+		{E90F5607-D993-47D6-A37D-DA4C76D4ACF4} = {7428F9C6-1E2E-4CCC-BAC8-C36DD4C2E630}
+		{12A9197E-A2BF-49BF-BB5D-7AC5E9C68045} = {25BC1822-2DEF-4D94-B88A-832E8E18E751}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB483309-9303-4AC8-B48C-D9008311886A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+
+  zxventures.aplication:
+    image: ${DOCKER_REGISTRY-}zxventuresaplication
+    container_name : zxventures.aplication
+    build:
+      context: .
+      dockerfile: ZXVentures.Aplication/Dockerfile
+
+  mongo-seed:
+    image: mongo:4.2.1
+    container_name: mongo-seed
+    environment:  
+      - MONGO_HOST=mongo
+      - MONGO_PORT=27017
+      - MONGODB_DATABASE=dbpdv
+    volumes:
+      - c:/mongocarga:/mongocarga
+     
+    command:  bash -c "mongoimport --host mongo --port 27017 --collection pdv --db dbpdv --mode upsert --type json --file /mongocarga/pdv.json --jsonArray &&
+     mongo mongo:27017/dbpdv --eval 'db.pdv.createIndex({'document':1},{'unique':true})' &&
+     mongo mongo:27017/dbpdv --eval 'db.pdv.createIndex({\"address\":\"2dsphere\"})'"
+
+      
+  mongo:
+
+     container_name: mongo
+     image: mongo:4.2.1
+     ports:
+      - 27017:27017
+    
