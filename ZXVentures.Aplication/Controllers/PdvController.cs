@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Net.Mime;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using ZXVentures.Domain.Entities;
 using ZXVentures.Domain.Interfaces;
 using ZXVentures.Domain.Model;
-using ZXVentures.Service;
 
 namespace ZXVentures.Aplication.Controllers
 {
@@ -14,26 +12,21 @@ namespace ZXVentures.Aplication.Controllers
     [ApiController]
     public class PdvController : ControllerBase
     {
-        private readonly IServicePdv _pdvService;
+        private readonly IServicePdv _servicePdv;
 
         public PdvController(IServicePdv pdvService)
         {
-            _pdvService = pdvService;
+            _servicePdv = pdvService;
         }
 
         [HttpGet("{id:int}", Name = "GetById")]
-        
         public IActionResult GetById(int id)
         {
- 
-            var pdv = _pdvService.GetById(id).Result;
+            var pdv = _servicePdv.GetById(id).Result;
 
             if (pdv == null) return NotFound();
 
-            return Ok( pdv );
- 
- 
-
+            return Ok(pdv);
         }
 
         [HttpPost(Name = "GetByLocation")]
@@ -41,21 +34,18 @@ namespace ZXVentures.Aplication.Controllers
         public IActionResult GetByLocation([FromBody] FilterPdvLocation filter)
         {
             if (ModelState.IsValid)
-            {
                 try
                 {
-                    var pdv = _pdvService.GetByLocation(longitude: filter.longitude, latitude: filter.latitude).Result;
+                    var pdv = _servicePdv.GetByLocation(filter.Longitude, filter.Latitude).Result;
                     if (pdv == null) return NotFound();
                     return Ok(pdv);
                 }
-                catch (Exception ex )
+                catch (Exception ex)
                 {
                     return BadRequest(ex.Message);
                 }
 
-            }
-
-            return BadRequest(); 
+            return BadRequest();
         }
 
         [HttpPost(Name = "InsertPdv")]
@@ -65,10 +55,9 @@ namespace ZXVentures.Aplication.Controllers
             if (ModelState.IsValid)
                 try
                 {
-                    if (_pdvService.Post(pdv).Exception == null)
+                    if (_servicePdv.Post(pdv).Exception == null)
                         return Ok(pdv.partnerId);
-                    else
-                        throw _pdvService.Post(pdv).Exception;
+                    throw _servicePdv.Post(pdv).Exception;
                 }
                 catch (Exception ex)
                 {

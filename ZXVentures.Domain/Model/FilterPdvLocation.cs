@@ -1,15 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace ZXVentures.Domain.Model
 {
     public class FilterPdvLocation
     {
-        [Required]
-        public double longitude { get; set; }
-        [Required]
-        public double latitude { get; set; }
+        private double longitudeNaoDeveEncontrar;
+        private object latitudeNaoDeveEncontra;
+
+        public FilterPdvLocation(double longitudeNaoDeveEncontrar, double latitudeNaoDeveEncontra)
+        {
+            this.Longitude = longitudeNaoDeveEncontrar;
+            this.Latitude = latitudeNaoDeveEncontra;
+        }
+
+        [Required] public double Longitude { get; set; }
+
+        [Required] public double Latitude { get; set; }
     }
 }

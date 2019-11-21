@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using ZXVentures.Domain.Entities;
+﻿using ZXVentures.Domain.Entities;
 
 namespace ZXVentures.Domain.Interfaces
 {

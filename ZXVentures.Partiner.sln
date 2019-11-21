@@ -31,6 +31,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Readme.md = Readme.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5-Test", "5-Test", "{A20A2501-8E52-4B61-BE95-3B80DFE369F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZXVentures.AplicationTests", "ZXVentures.AplicationTests\ZXVentures.AplicationTests.csproj", "{4F3DCCA7-F7A8-4811-B91E-E76E2BF99C9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,10 @@ Global
 		{B3F601E6-887F-4A93-8693-7577244B5C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3F601E6-887F-4A93-8693-7577244B5C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3F601E6-887F-4A93-8693-7577244B5C23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F3DCCA7-F7A8-4811-B91E-E76E2BF99C9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F3DCCA7-F7A8-4811-B91E-E76E2BF99C9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F3DCCA7-F7A8-4811-B91E-E76E2BF99C9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F3DCCA7-F7A8-4811-B91E-E76E2BF99C9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

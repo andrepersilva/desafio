@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using ZXVentures.Domain.Entities;
 
@@ -17,7 +15,7 @@ namespace ZXVentures.Domain.Interfaces
         Task<T> GetById(int id);
 
         Task<T> GetByLocation(double longitude,
-                              double latitude);
+            double latitude);
 
         Task<IEnumerable<T>> GetAll();
     }
